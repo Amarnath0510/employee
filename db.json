@@ -1,28 +1,3 @@
 {
-  "employees": [
-    {
-      "name": "Amarnath",
-      "email": "amarsprofil555@gmail.com",
-      "employeeId": "1234",
-      "mobile": "9876543211",
-      "jobRole": "Managers",
-      "id": 1
-    },
-    {
-      "name": "test",
-      "email": "amarsprofil555@gmail.com",
-      "employeeId": "1234",
-      "mobile": "9876543211",
-      "jobRole": "Developer",
-      "id": 2
-    },
-    {
-      "name": "amarnath",
-      "email": "amarmuthu007@gmail.com",
-      "employeeId": "12345",
-      "mobile": "9876543211",
-      "jobRole": "Developer",
-      "id": 3
-    }
-  ]
+  "employees": []
 }

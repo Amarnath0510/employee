@@ -19,9 +19,9 @@ const EmployeeList = ({ refreshEmployees, setSelectedEmployee }) => {
 
   useEffect(() => {
     fetchEmployees();
-  }, []);
+  }, [refreshEmployees]);
 
- 
+
   const handleEdit = (employee) => {
     setSelectedEmployee(employee);
   };
@@ -31,12 +31,17 @@ const EmployeeList = ({ refreshEmployees, setSelectedEmployee }) => {
       try {
         await axios.delete(`http://localhost:5000/employees/${id}`);
         toast.success('Employee deleted successfully');
-        fetchEmployees(); 
+  
+        // Update the state by filtering out the deleted employee locally
+        setEmployees((prevEmployees) => prevEmployees.filter((employee) => employee.id !== id));
+        // refreshEmployees()
+        
       } catch (error) {
         toast.error('Error deleting employee');
       }
     }
   };
+  
 
   return (
     <div>
